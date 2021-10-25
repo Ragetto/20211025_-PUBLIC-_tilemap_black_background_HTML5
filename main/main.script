@@ -1,0 +1,32 @@
+---========================---
+---== LUA MODULE IMPORTS ==---
+---========================---
+local debugdraw = require "lua-modules.libs-defold.debug-draw.debug-draw"
+local defmath = require "lua-modules.libs-defold.defmath.defmath"
+local deflist = require "lua-modules.libs-defold.deftable.list_utils"
+local lume = require "lua-modules.libs-external.lume.lume"
+local gui_extra = require "lua-modules.libs-defold.gui_extra.gui_extra"
+local monarch = require "lua-modules.libs-defold.monarch.monarch"
+local rc = require "lua-modules.libs-defold.rendercam.rendercam"
+local csv = require "lua-modules.libs-defold.csv-importer.csv-importer"
+local c = require "lua-modules.gamedata.constants"
+local f = require "lua-modules.libs-self.functions"
+local tl = require "tilemaps.retro_tilemap.tilemap-32x32-001-layers" --layers lua (main)
+local tt = require "tilemaps.retro_tilemap.tilemap-32x32-001-tiles" --tileset lua
+local rs = require "main.render.render"
+
+---========================---
+---========================---
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	msg.post("@render:", "use_fixed_fit_projection", { near = -1, far = 1 })
+end
+
+
+function update(self, dt)
+end
+
+
+function on_input(self, action_id, action)
+end
